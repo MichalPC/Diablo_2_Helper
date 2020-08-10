@@ -1,0 +1,666 @@
+{
+  "runes": [
+    {
+      "id": 1,
+      "name": "El",
+      "level": 11,
+      "rune_stats": [
+        {
+          "name": "Weapon",
+          "stats": [
+            "+ 50 Attack Rating",
+            "+ 1 Light Radius"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "+ 1 Light Radius",
+            "+ 15 Defense"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Eld",
+      "level": 11,
+      "rune_stats": [
+        {
+          "name": "Weapon",
+          "stats": [
+            "+ 75% Damage To Undead",
+            "+ 50 Attack Rating vs. Undead"
+          ]
+        },
+        {
+          "name": "Armor/Helm",
+          "stats": [
+            "15% Slower Stamina Drain"
+          ]
+        },
+        {
+          "name": "Shield",
+          "stats": [
+            "+ 7% Block Chance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Tir",
+      "level": 13,
+      "rune_stats": [
+        {
+          "name": "Weapon",
+          "stats": [
+            "+ 2 Mana Per Kill"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "+ 2 Mana Per Kill"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Nef",
+      "level": 13,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ Knockback"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "+ 30 Defense vs. Missile"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Eth",
+      "level": 15,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ -25% Target Defense"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "Regenerate Mana 15%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Ith",
+      "level": 15,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ 9 to Maximum Damage"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "15% Damage Taken Goes to Mana"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Tal",
+      "level": 17,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ 75 Poison damage over 5 seconds"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "+ 35% Poison Resistance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Ral",
+      "level": 19,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ 5-30 Fire Damage"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "+ 35% Fire Resistance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Ort",
+      "level": 21,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ 1-50 Lightning Damage"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "+ 35% Lightning Resistance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Thul",
+      "level": 23,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ 3-14 Cold Damage (Cold Length 3 seconds)"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "+ 35% Cold Resistance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Amn",
+      "level": 25,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ 7% Life Stolen Per Hit"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "Attacker takes 14 damage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Sol",
+      "level": 27,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ 9 to Minimum Damage"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "- 7 Damage Taken"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Shael",
+      "level": 29,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ 20% Increased Attack Speed"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "20% Faster Hit Recovery"
+          ]
+        },
+        {
+          "name": "Shield",
+          "stats": [
+            "20% Faster Block Rate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Dol",
+      "clevel": 31,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "Hit Causes Monster To Flee 25%"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "Replenish Life +7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Hel",
+      "clevel": 0,
+      "ilevel": 33,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "Requirements -20%"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "Requirements -15%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Io",
+      "level": 35,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ 10 To Vitality"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "+ 10 To Vitality"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Lum",
+      "level": 37,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ 10 To Energy"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "+ 10 To Energy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Ko",
+      "level": 39,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ 10 To Dexterity"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "+ 10 To Dexterity"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Fal",
+      "level": 41,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ 10 To Strength"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "+ 10 To Strength"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Lem",
+      "level": 43,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ 75% Extra Gold From Monsters"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "+ 50% Extra Gold From Monsters"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Pul",
+      "level": 45,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ 75% Damage To Demons",
+            "+ 100 Attack Rating Against Demons"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "+30% Enhanced Defense"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Um",
+      "level": 47,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "25% Chance of Open Wounds"
+          ]
+        },
+        {
+          "name": "Armor/Helm",
+          "stats": [
+            "All Resistances +15"
+          ]
+        },
+        {
+          "name": "Shield",
+          "stats": [
+            "All Resistances +22"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Mal",
+      "level": 49,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "Prevent Monster Healing"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "Reduce Magic Damage by 7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Ist",
+      "level": 51,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ 30% Better Chance of Finding Magical Items"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "+ 25% Better Chance of Finding Magical Items"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Gul",
+      "level": 53,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ 20% Attack Rating"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "+ 5 to Max Poison Resistance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Vex",
+      "level": 55,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "7% Mana Stolen Per Hit"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "5% To Maximum Fire Resist"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Ohm",
+      "level": 57,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "+ 50% Enhanced Damage"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "5% To Maximum Cold Resist"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Lo",
+      "level": 59,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "20% Deadly Strike"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "5% To Maximum Lightning Resist"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Sur",
+      "level": 61,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "Hit Blinds Target"
+          ]
+        },
+        {
+          "name": "Armor/Helm",
+          "stats": [
+            "Maximum Mana 5%"
+          ]
+        },
+        {
+          "name": "Shield",
+          "stats": [
+            "+50 To Mana"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Ber",
+      "level": 63,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "20% Chance of Crushing Blow"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "Damage Reduced by 8%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Jah",
+      "level": 65,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "Ignores Target Defense"
+          ]
+        },
+        {
+          "name": "Armor/Helm",
+          "stats": [
+            "Increase Maximum Life 5%"
+          ]
+        },
+        {
+          "name": "Shield",
+          "stats": [
+            "+ 50 Life"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Cham",
+      "level": 67,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "Freeze Target +3"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "Cannot be Frozen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Zod",
+      "level": 69,
+      "rune_stats": [
+        {
+          "name": "Weapons",
+          "stats": [
+            "Indestructible"
+          ]
+        },
+        {
+          "name": "Armor/Helm/Shield",
+          "stats": [
+            "Indestructible"
+          ]
+        }
+      ]
+    }
+  ]
+}

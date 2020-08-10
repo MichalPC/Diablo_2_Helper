@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="9"
+        android:background="#b0b0b0"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="SELECT YOUR RUNES"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:background="#919191"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/selection_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="#919191">
+
+        <Button
+            android:id="@+id/clear_runes_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Clear"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp" />
+
+        <Button
+            android:id="@+id/selection_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Find Rune Words"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"/>
+    </LinearLayout>
+</LinearLayout>
