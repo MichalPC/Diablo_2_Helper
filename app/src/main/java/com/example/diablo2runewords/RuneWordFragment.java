@@ -372,7 +372,8 @@ public class RuneWordFragment extends Fragment {
   public void onResume() {
     super.onResume();
 
-    runeWordAdaptor.setFavouriteRuneWords(DataUtil.loadArrayList(sharedPreferences, favRuneWordsKey));
+    runeWordAdaptor.setFavouriteRuneWords(
+            DataUtil.loadArrayList(sharedPreferences, favRuneWordsKey));
   }
 
   @Override
