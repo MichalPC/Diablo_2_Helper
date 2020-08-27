@@ -14,7 +14,9 @@ import com.example.diablo2runewords.databinding.RuneSelectionFragmentBinding;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class RuneSelectionFragment extends Fragment implements RuneSelectionDialog.RuneSelectionDialogListener {
+public class RuneSelectionFragment extends Fragment
+                                    implements RuneSelectionDialog.RuneSelectionDialogListener {
+
   private String runeStashKey;
   private SharedPreferences sharedPreferences;
   private ArrayList<Rune> runeList;
