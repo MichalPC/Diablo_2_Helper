@@ -130,11 +130,15 @@ public class RuneListAdaptor extends RecyclerView.Adapter<RuneListAdaptor.ViewHo
           if (!runeFavouriteToggle.isChecked()) {
             runeFavouriteToggle.setBackgroundDrawable(greyStar);
 
-            Toast.makeText(itemView.getContext(), "Removed from Favourites", Toast.LENGTH_SHORT).show();
+            Toast.makeText(itemView.getContext(),
+                          "Removed from Favourites",
+                          Toast.LENGTH_SHORT).show();
           } else {
             runeFavouriteToggle.setBackgroundDrawable(goldStar);
 
-            Toast.makeText(itemView.getContext(), "Added to Favourites", Toast.LENGTH_SHORT).show();
+            Toast.makeText(itemView.getContext(),
+                          "Added to Favourites",
+                          Toast.LENGTH_SHORT).show();
           }
         }
       });
@@ -143,7 +147,8 @@ public class RuneListAdaptor extends RecyclerView.Adapter<RuneListAdaptor.ViewHo
         @Override
         public void onClick(View v) {
           if (runeStatsSection.getVisibility() == View.GONE) {
-            ExpansionAnimation.expand(runeStatsSection, Integer.parseInt(AnimationSpeed.DROPDOWN_OPEN.toString()));
+            ExpansionAnimation.expand(runeStatsSection,
+                                      Integer.parseInt(AnimationSpeed.DROPDOWN_OPEN.toString()));
 
             RotateAnimation ra = new RotateAnimation(0, 360,
                     RotateAnimation.RELATIVE_TO_SELF, .5f,
@@ -152,7 +157,8 @@ public class RuneListAdaptor extends RecyclerView.Adapter<RuneListAdaptor.ViewHo
             ra.setDuration(500);
             runeStatsBtn.setAnimation(ra);
           } else {
-            ExpansionAnimation.collapse(runeStatsSection, Integer.parseInt(AnimationSpeed.DROPDOWN_CLOSE.toString()));
+            ExpansionAnimation.collapse(runeStatsSection,
+                                        Integer.parseInt(AnimationSpeed.DROPDOWN_CLOSE.toString()));
 
             RotateAnimation ra = new RotateAnimation(360, 0,
                     RotateAnimation.RELATIVE_TO_SELF, .5f,
