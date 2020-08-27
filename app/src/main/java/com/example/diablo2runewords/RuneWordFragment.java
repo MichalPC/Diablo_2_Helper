@@ -187,7 +187,9 @@ public class RuneWordFragment extends Fragment {
     return tempList;
   }
 
-  private ArrayList<RuneWord> filterByItemType(ArrayList<RuneWord> runeWordList, RuneWordCategory itemType) {
+  private ArrayList<RuneWord> filterByItemType(ArrayList<RuneWord> runeWordList,
+                                               RuneWordCategory itemType) {
+
     ArrayList<RuneWord> tempList = new ArrayList<>();
 
     for (RuneWord rw : runeWordList) {
