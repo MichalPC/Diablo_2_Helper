@@ -103,8 +103,12 @@ public class RuneListAdaptor extends RecyclerView.Adapter<RuneListAdaptor.ViewHo
     public ToggleButton runeFavouriteToggle;
     public ImageView temp;
     public ConstraintLayout runeLayout;
-    Drawable greyStar = ResourcesCompat.getDrawable(itemView.getResources(), R.drawable.star_grey, null);
-    Drawable goldStar = ResourcesCompat.getDrawable(itemView.getResources(), R.drawable.star_gold, null);
+    Drawable greyStar = ResourcesCompat.getDrawable(itemView.getResources(),
+                                                    R.drawable.star_grey,
+                                                    null);
+    Drawable goldStar = ResourcesCompat.getDrawable(itemView.getResources(),
+                                                    R.drawable.star_gold,
+                                                    null);
 
     public ViewHolder(@NonNull final View itemView) {
       super(itemView);
