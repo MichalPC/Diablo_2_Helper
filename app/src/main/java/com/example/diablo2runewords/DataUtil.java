@@ -7,7 +7,9 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class DataUtil {
-  public static void saveArrayList(SharedPreferences prefFile, String key, ArrayList<Integer> value) {
+  public static void saveArrayList(SharedPreferences prefFile,
+                                   String key,
+                                   ArrayList<Integer> value) {
     Gson gson = new Gson();
 
     String arrayToJson = gson.toJson(value);
