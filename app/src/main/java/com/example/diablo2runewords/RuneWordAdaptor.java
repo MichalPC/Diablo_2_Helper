@@ -207,7 +207,8 @@ class RuneWordAdaptor extends RecyclerView.Adapter<RuneWordAdaptor.ViewHolder>
           if (!favouriteToggle.isChecked()) {
             favouriteToggle.setBackgroundDrawable(greyStar);
 
-            int tempIndex = favouriteRuneWords.indexOf(runeWordList.get((getAdapterPosition())).getId());
+            int tempIndex = favouriteRuneWords
+                              .indexOf(runeWordList.get((getAdapterPosition())).getId());
 
             System.out.println(tempIndex);
 
@@ -232,7 +233,8 @@ class RuneWordAdaptor extends RecyclerView.Adapter<RuneWordAdaptor.ViewHolder>
         @Override
         public void onClick(View v) {
           if (statsSection.getVisibility() == View.GONE) {
-            ExpansionAnimation.expand(statsSection, Integer.parseInt(AnimationSpeed.BUTTON.toString()));
+            ExpansionAnimation.expand(statsSection,
+                                      Integer.parseInt(AnimationSpeed.BUTTON.toString()));
 
             RotateAnimation ra = new RotateAnimation(0, 360,
               RotateAnimation.RELATIVE_TO_SELF, .5f,
@@ -241,7 +243,8 @@ class RuneWordAdaptor extends RecyclerView.Adapter<RuneWordAdaptor.ViewHolder>
             ra.setDuration(500);
             statsExpandBtn.setAnimation(ra);
           } else {
-            ExpansionAnimation.collapse(statsSection, Integer.parseInt(AnimationSpeed.BUTTON.toString()));
+            ExpansionAnimation.collapse(statsSection,
+                                        Integer.parseInt(AnimationSpeed.BUTTON.toString()));
 
             RotateAnimation ra = new RotateAnimation(360, 0,
               RotateAnimation.RELATIVE_TO_SELF, .5f,
