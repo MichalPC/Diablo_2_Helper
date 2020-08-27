@@ -42,8 +42,17 @@ public class RuneSelectionFragment extends Fragment
 
   @Override
   public void setRuneWordSelection(boolean showComplete) {
-    FragmentTransaction changeFr = getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,
-        RuneWordFragment.newInstance(runeWordList, listAdaptor.getAvailableRunes(), showComplete), "RUNE_WORD_FRAGMENT");
+    RuneWordFragment tempFragment = RuneWordFragment
+                                      .newInstance(runeWordList,
+                                                    listAdaptor.getAvailableRunes(),
+                                                    showComplete);
+
+    FragmentTransaction changeFr = getFragmentManager()
+                                      .beginTransaction()
+                                      .addToBackStack(null)
+                                      .replace(R.id.fragment_container,
+                                                tempFragment,
+                                            "RUNE_WORD_FRAGMENT");
 
     changeFr.commit();
   }
