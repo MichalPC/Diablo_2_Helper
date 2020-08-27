@@ -202,7 +202,10 @@ public class RuneWordFragment extends Fragment {
     return tempList;
   }
 
-  private ArrayList<RuneWord> filterByCharacterLevel(ArrayList<RuneWord> runeWordList, int minCharLevel, int maxCharLevel) {
+  private ArrayList<RuneWord> filterByCharacterLevel(ArrayList<RuneWord> runeWordList,
+                                                     int minCharLevel,
+                                                     int maxCharLevel) {
+
     ArrayList<RuneWord> tempList = new ArrayList<>();
 
     if (minCharLevel > maxCharLevel) {
