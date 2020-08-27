@@ -111,7 +111,10 @@ class RuneWordAdaptor extends RecyclerView.Adapter<RuneWordAdaptor.ViewHolder>
 
     for (Rune rune : curWord.getRequiredRunes()) {
       spannable.append(rune.getRuneName().toUpperCase());
-      spannable.setSpan(new StyleSpan(Typeface.BOLD), start, spannable.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+      spannable.setSpan(new StyleSpan(Typeface.BOLD),
+                        start,
+                        spannable.length(),
+                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
       spannable.append(", ");
       start = spannable.length();
     }
