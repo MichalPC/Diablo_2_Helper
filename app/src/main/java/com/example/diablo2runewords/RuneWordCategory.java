@@ -11,7 +11,7 @@ public enum RuneWordCategory {
 
   String value;
 
-  private RuneWordCategory(String value) {
+  RuneWordCategory(String value) {
     this.value = value;
   }
 
