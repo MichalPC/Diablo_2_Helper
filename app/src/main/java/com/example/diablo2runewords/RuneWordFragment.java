@@ -91,8 +91,10 @@ public class RuneWordFragment extends Fragment {
 
     //Load data into socketNumberSpinner
     ArrayAdapter<String> socketNumberSpinnerAdaptor = new ArrayAdapter<>(this.getActivity(),
-            android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.number_of_sockets));
-    socketNumberSpinnerAdaptor.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+            android.R.layout.simple_list_item_1,
+            getResources().getStringArray(R.array.number_of_sockets));
+    socketNumberSpinnerAdaptor.setDropDownViewResource(
+            R.layout.support_simple_spinner_dropdown_item);
     binding.socketNumberSpinner.setAdapter(socketNumberSpinnerAdaptor);
 
     //Load data into itemTypeSpinner
@@ -124,7 +126,8 @@ public class RuneWordFragment extends Fragment {
       originalSelectedRuneWords = new ArrayList<>(currentSelectedRuneWords);
 
       runeWordAdaptor = new RuneWordAdaptor(currentSelectedRuneWords, v.getContext());
-      runeWordAdaptor.setFavouriteRuneWords(DataUtil.loadArrayList(sharedPreferences, favRuneWordsKey));
+      runeWordAdaptor.setFavouriteRuneWords(
+              DataUtil.loadArrayList(sharedPreferences, favRuneWordsKey));
     }
     binding.runeWordsList.setAdapter(runeWordAdaptor);
     return v;
