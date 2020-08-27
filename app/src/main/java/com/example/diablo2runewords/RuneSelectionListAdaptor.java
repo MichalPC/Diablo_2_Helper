@@ -37,7 +37,9 @@ public class RuneSelectionListAdaptor<Exercise>
   }
 
   @Override
-  public void onBindViewHolder(@NonNull RuneSelectionListAdaptor.ViewHolder holder, final int position) {
+  public void onBindViewHolder(@NonNull RuneSelectionListAdaptor.ViewHolder holder,
+                               final int position) {
+
     Rune curWord = runeList.get(position);
 
     holder.number.setText(availableRunes.get(position));
