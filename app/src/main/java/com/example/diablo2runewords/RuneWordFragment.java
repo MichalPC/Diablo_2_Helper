@@ -79,7 +79,10 @@ public class RuneWordFragment extends Fragment {
     sharedPreferences = getActivity().getSharedPreferences("USER", Activity.MODE_PRIVATE);
   }
 
-  public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+  public View onCreateView(LayoutInflater inflater,
+                           @Nullable ViewGroup container,
+                           @Nullable Bundle savedInstanceState) {
+
     super.onCreate(savedInstanceState);
     binding = RuneWordsFragmentBinding.inflate(inflater, container, false);
     View v = binding.getRoot();
