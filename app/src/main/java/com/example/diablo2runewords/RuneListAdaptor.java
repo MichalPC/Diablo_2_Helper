@@ -1,6 +1,7 @@
 package com.example.diablo2runewords;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -102,8 +103,8 @@ public class RuneListAdaptor extends RecyclerView.Adapter<RuneListAdaptor.ViewHo
     public ToggleButton runeFavouriteToggle;
     public ImageView temp;
     public ConstraintLayout runeLayout;
-    Drawable greyStar = itemView.getResources().getDrawable(R.drawable.star_grey);
-    Drawable goldStar = itemView.getResources().getDrawable(R.drawable.star_gold);
+    Drawable greyStar = ResourcesCompat.getDrawable(itemView.getResources(), R.drawable.star_grey, null);
+    Drawable goldStar = ResourcesCompat.getDrawable(itemView.getResources(), R.drawable.star_gold, null);
 
     public ViewHolder(@NonNull final View itemView) {
       super(itemView);
