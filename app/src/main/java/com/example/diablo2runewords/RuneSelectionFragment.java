@@ -73,7 +73,10 @@ public class RuneSelectionFragment extends Fragment
 
   @Override
   @Nullable
-  public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+  public View onCreateView(final LayoutInflater inflater,
+                           @Nullable ViewGroup container,
+                           @Nullable Bundle savedInstanceState) {
+
     super.onCreateView(inflater, container, savedInstanceState);
 
     binding = RuneSelectionFragmentBinding.inflate(inflater, container, false);
