@@ -17,9 +17,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-  private final String runesFileName = "runes.json";
-  private final  String runeWordsFileName = "rune_words.json";
+public class MainActivity extends AppCompatActivity
+                          implements NavigationView.OnNavigationItemSelectedListener {
+
   private ActivityMainBinding binding;
   private ArrayList<Rune> runeList;
   private ArrayList<RuneWord> runeWordList;
