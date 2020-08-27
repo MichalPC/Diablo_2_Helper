@@ -40,8 +40,11 @@ public class MainActivity extends AppCompatActivity
 
     binding.navView.setNavigationItemSelectedListener(this);
 
-    ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, binding.mainActivityLayout, binding.toolbar,
-            R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+    ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
+                                                              binding.mainActivityLayout,
+                                                              binding.toolbar,
+                                                              R.string.navigation_drawer_open,
+                                                              R.string.navigation_drawer_close);
     binding.mainActivityLayout.addDrawerListener(toggle);
     toggle.syncState();
 
