@@ -13,7 +13,14 @@ public class RuneWord implements Comparable<RuneWord>, Parcelable {
   private double version;
   private boolean isLadder;
 
-  public RuneWord(int id, String runeWordName, int cLevel, boolean isLadder, Rune[] reqRunes, RuneWordCategory[] runeWordCat, String[] stats, double version) {
+  public RuneWord(int id,
+                  String runeWordName,
+                  int cLevel, boolean isLadder,
+                  Rune[] reqRunes,
+                  RuneWordCategory[] runeWordCat,
+                  String[] stats,
+                  double version) {
+
     this.id = id;
     this.runeWordName = runeWordName;
     this.cLevel = cLevel;
