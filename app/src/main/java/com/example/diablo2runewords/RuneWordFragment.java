@@ -241,13 +241,15 @@ public class RuneWordFragment extends Fragment {
     ArrayList<RuneWord> tempList = new ArrayList<>();
 
     if (binding.itemTypeFilterToggle.isChecked()) {
-      tempList.addAll(filterByItemType(tempOriginalList, (RuneWordCategory) binding.itemTypeSpinner.getSelectedItem()));
+      tempList.addAll(filterByItemType(tempOriginalList,
+            (RuneWordCategory) binding.itemTypeSpinner.getSelectedItem()));
       tempOriginalList.clear();
       tempOriginalList.addAll(tempList);
       tempList.clear();
     }
     if (binding.socketFilterToggle.isChecked()) {
-      tempList.addAll(filterBySockets(tempOriginalList, Integer.parseInt((String) binding.socketNumberSpinner.getSelectedItem())));
+      tempList.addAll(filterBySockets(tempOriginalList,
+              Integer.parseInt((String) binding.socketNumberSpinner.getSelectedItem())));
       tempOriginalList.clear();
       tempOriginalList.addAll(tempList);
       tempList.clear();
