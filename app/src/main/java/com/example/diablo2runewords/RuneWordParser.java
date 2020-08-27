@@ -63,7 +63,14 @@ public class RuneWordParser {
         double version = curWords.getDouble("version");
         boolean isLadder = curWords.getBoolean("is_ladder");
 
-        runeWordList.add(new RuneWord(runeWordId, runeWordName, charLevel, isLadder, runesArray, classArray, statsArray, version));
+        runeWordList.add( new RuneWord(runeWordId,
+                                        runeWordName,
+                                        charLevel,
+                                        isLadder,
+                                        runesArray,
+                                        classArray,
+                                        statsArray,
+                                        version));
       }
       System.out.println("SUCCESS " + runeWordList.size());
     } catch (JSONException e) {
