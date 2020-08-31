@@ -31,8 +31,8 @@ public class RunesParser {
     }
 
     try {
-      JSONArray allRunes = runesFile.getJSONArray("runes");
       runesFile = new JSONObject(jsonInString.toString());
+      JSONArray allRunes = runesFile.getJSONArray("runes");
       runeList = new ArrayList<>();
 
       //Rune Array
