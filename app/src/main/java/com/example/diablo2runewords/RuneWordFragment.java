@@ -23,7 +23,6 @@ import com.example.diablo2runewords.databinding.RuneWordsFragmentBinding;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.zip.Inflater;
 
 public class RuneWordFragment extends Fragment {
   private String favRuneWordsKey;
