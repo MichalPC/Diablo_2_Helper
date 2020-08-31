@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import android.view.animation.RotateAnimation;
 import android.widget.Filter;
 import android.widget.Filterable;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
