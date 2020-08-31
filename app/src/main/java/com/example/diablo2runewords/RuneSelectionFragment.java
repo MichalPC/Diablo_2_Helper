@@ -73,7 +73,7 @@ public class RuneSelectionFragment extends Fragment
 
   @Override
   @Nullable
-  public View onCreateView(final LayoutInflater inflater,
+  public View onCreateView(@Nullable LayoutInflater inflater,
                            @Nullable ViewGroup container,
                            @Nullable Bundle savedInstanceState) {
 
