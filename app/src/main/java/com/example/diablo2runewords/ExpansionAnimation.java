@@ -7,7 +7,7 @@ import android.view.View;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 /**
- * THIS IS A WRAPPER CLASS FOR CODE BY Tom Esterez* <p>
+ * THIS IS A WRAPPER CLASS FOR CODE BY Tom Esterez
  * https://stackoverflow.com/questions/4946295/android-expand-collapse-animation
  */
 public class ExpansionAnimation {
