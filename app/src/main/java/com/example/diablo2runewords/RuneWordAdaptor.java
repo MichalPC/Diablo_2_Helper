@@ -236,8 +236,8 @@ class RuneWordAdaptor extends RecyclerView.Adapter<RuneWordAdaptor.ViewHolder>
                                       Integer.parseInt(AnimationSpeed.BUTTON.toString()));
 
             RotateAnimation ra = new RotateAnimation(0, 360,
-              RotateAnimation.RELATIVE_TO_SELF, .5f,
-              RotateAnimation.RELATIVE_TO_SELF, .5f);
+                RotateAnimation.RELATIVE_TO_SELF, .5f,
+                RotateAnimation.RELATIVE_TO_SELF, .5f);
 
             ra.setDuration(500);
             statsExpandBtn.setAnimation(ra);
@@ -246,8 +246,8 @@ class RuneWordAdaptor extends RecyclerView.Adapter<RuneWordAdaptor.ViewHolder>
                                         Integer.parseInt(AnimationSpeed.BUTTON.toString()));
 
             RotateAnimation ra = new RotateAnimation(360, 0,
-              RotateAnimation.RELATIVE_TO_SELF, .5f,
-              RotateAnimation.RELATIVE_TO_SELF, .5f);
+                RotateAnimation.RELATIVE_TO_SELF, .5f,
+                RotateAnimation.RELATIVE_TO_SELF, .5f);
 
             ra.setDuration(500);
             statsExpandBtn.setAnimation(ra);
