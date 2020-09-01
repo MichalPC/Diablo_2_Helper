@@ -5,7 +5,7 @@ public enum AnimationSpeed {
 
   Integer speed;
 
-  private AnimationSpeed(int speed) {
+  AnimationSpeed(int speed) {
     this.speed = speed;
   }
 

@@ -14,7 +14,9 @@ import com.example.diablo2runewords.databinding.RuneSelectionFragmentBinding;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class RuneSelectionFragment extends Fragment implements RuneSelectionDialog.RuneSelectionDialogListener {
+public class RuneSelectionFragment extends Fragment
+                                    implements RuneSelectionDialog.RuneSelectionDialogListener {
+
   private String runeStashKey;
   private SharedPreferences sharedPreferences;
   private ArrayList<Rune> runeList;
@@ -40,8 +42,17 @@ public class RuneSelectionFragment extends Fragment implements RuneSelectionDial
 
   @Override
   public void setRuneWordSelection(boolean showComplete) {
-    FragmentTransaction changeFr = getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,
-        RuneWordFragment.newInstance(runeWordList, listAdaptor.getAvailableRunes(), showComplete), "RUNE_WORD_FRAGMENT");
+    RuneWordFragment tempFragment = RuneWordFragment
+                                      .newInstance(runeWordList,
+                                                    listAdaptor.getAvailableRunes(),
+                                                    showComplete);
+
+    FragmentTransaction changeFr = getFragmentManager()
+                                      .beginTransaction()
+                                      .addToBackStack(null)
+                                      .replace(R.id.fragment_container,
+                                                tempFragment,
+                                            "RUNE_WORD_FRAGMENT");
 
     changeFr.commit();
   }
@@ -62,7 +73,10 @@ public class RuneSelectionFragment extends Fragment implements RuneSelectionDial
 
   @Override
   @Nullable
-  public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+  public View onCreateView(@Nullable LayoutInflater inflater,
+                           @Nullable ViewGroup container,
+                           @Nullable Bundle savedInstanceState) {
+
     super.onCreateView(inflater, container, savedInstanceState);
 
     binding = RuneSelectionFragmentBinding.inflate(inflater, container, false);

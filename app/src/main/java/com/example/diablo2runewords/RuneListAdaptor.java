@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.view.animation.RotateAnimation;
 import android.widget.Filter;
 import android.widget.Filterable;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,9 +19,10 @@ import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class RuneListAdaptor extends RecyclerView.Adapter<RuneListAdaptor.ViewHolder> implements Filterable {
+public class RuneListAdaptor extends RecyclerView.Adapter<RuneListAdaptor.ViewHolder>
+                             implements Filterable {
+
   private ArrayList<Rune> runeList;
   private ArrayList<Rune> runeListFull;
   private Context context;
@@ -102,8 +102,12 @@ public class RuneListAdaptor extends RecyclerView.Adapter<RuneListAdaptor.ViewHo
     public ToggleButton runeFavouriteToggle;
     public ImageView temp;
     public ConstraintLayout runeLayout;
-    Drawable greyStar = itemView.getResources().getDrawable(R.drawable.star_grey);
-    Drawable goldStar = itemView.getResources().getDrawable(R.drawable.star_gold);
+    Drawable greyStar = ResourcesCompat.getDrawable(itemView.getResources(),
+                                                    R.drawable.star_grey,
+                                                    null);
+    Drawable goldStar = ResourcesCompat.getDrawable(itemView.getResources(),
+                                                    R.drawable.star_gold,
+                                                    null);
 
     public ViewHolder(@NonNull final View itemView) {
       super(itemView);
@@ -125,11 +129,15 @@ public class RuneListAdaptor extends RecyclerView.Adapter<RuneListAdaptor.ViewHo
           if (!runeFavouriteToggle.isChecked()) {
             runeFavouriteToggle.setBackgroundDrawable(greyStar);
 
-            Toast.makeText(itemView.getContext(), "Removed from Favourites", Toast.LENGTH_SHORT).show();
+            Toast.makeText(itemView.getContext(),
+                          "Removed from Favourites",
+                          Toast.LENGTH_SHORT).show();
           } else {
             runeFavouriteToggle.setBackgroundDrawable(goldStar);
 
-            Toast.makeText(itemView.getContext(), "Added to Favourites", Toast.LENGTH_SHORT).show();
+            Toast.makeText(itemView.getContext(),
+                          "Added to Favourites",
+                          Toast.LENGTH_SHORT).show();
           }
         }
       });
@@ -138,7 +146,8 @@ public class RuneListAdaptor extends RecyclerView.Adapter<RuneListAdaptor.ViewHo
         @Override
         public void onClick(View v) {
           if (runeStatsSection.getVisibility() == View.GONE) {
-            ExpansionAnimation.expand(runeStatsSection, Integer.parseInt(AnimationSpeed.DROPDOWN_OPEN.toString()));
+            ExpansionAnimation.expand(runeStatsSection,
+                                      Integer.parseInt(AnimationSpeed.DROPDOWN_OPEN.toString()));
 
             RotateAnimation ra = new RotateAnimation(0, 360,
                     RotateAnimation.RELATIVE_TO_SELF, .5f,
@@ -147,7 +156,8 @@ public class RuneListAdaptor extends RecyclerView.Adapter<RuneListAdaptor.ViewHo
             ra.setDuration(500);
             runeStatsBtn.setAnimation(ra);
           } else {
-            ExpansionAnimation.collapse(runeStatsSection, Integer.parseInt(AnimationSpeed.DROPDOWN_CLOSE.toString()));
+            ExpansionAnimation.collapse(runeStatsSection,
+                                        Integer.parseInt(AnimationSpeed.DROPDOWN_CLOSE.toString()));
 
             RotateAnimation ra = new RotateAnimation(360, 0,
                     RotateAnimation.RELATIVE_TO_SELF, .5f,

@@ -17,9 +17,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-  private final String runesFileName = "runes.json";
-  private final  String runeWordsFileName = "rune_words.json";
+public class MainActivity extends AppCompatActivity
+                          implements NavigationView.OnNavigationItemSelectedListener {
+
   private ActivityMainBinding binding;
   private ArrayList<Rune> runeList;
   private ArrayList<RuneWord> runeWordList;
@@ -40,8 +40,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     binding.navView.setNavigationItemSelectedListener(this);
 
-    ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, binding.mainActivityLayout, binding.toolbar,
-            R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+    ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
+                                                              binding.mainActivityLayout,
+                                                              binding.toolbar,
+                                                              R.string.navigation_drawer_open,
+                                                              R.string.navigation_drawer_close);
     binding.mainActivityLayout.addDrawerListener(toggle);
     toggle.syncState();
 
@@ -56,20 +59,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
   public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
     switch (menuItem.getItemId()) {
       case R.id.nav_runes:
-        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,
-                RuneFragment.newInstance(runeList), "RUNE_FRAGMENT").commit();
+        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(
+          R.id.fragment_container,
+          RuneFragment.newInstance(runeList),
+          "RUNE_FRAGMENT").commit();
         break;
       case R.id.nav_home:
-        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,
-                new HomeFragment(), "HOME_FRAGMENT").commit();
+        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(
+          R.id.fragment_container, new HomeFragment(), "HOME_FRAGMENT").commit();
         break;
       case R.id.nav_rune_selection:
-        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,
-                RuneSelectionFragment.newInstance(runeList, runeWordList, favRuneWords), "RUNE_SELECTION_FRAGMENT").commit();
+        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(
+          R.id.fragment_container,
+          RuneSelectionFragment.newInstance(runeList, runeWordList, favRuneWords),
+          "RUNE_SELECTION_FRAGMENT").commit();
         break;
       case R.id.nav_fav_rune_words:
-        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,
-                RuneWordFragment.newInstance(runeWordList, favRuneWords), "FAV_RUNE_WORDS_FRAGMENT").commit();
+        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(
+          R.id.fragment_container,
+          RuneWordFragment.newInstance(runeWordList, favRuneWords),
+          "FAV_RUNE_WORDS_FRAGMENT").commit();
         break;
       case R.id.nav_share:
         Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();

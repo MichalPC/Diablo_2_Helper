@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import android.view.animation.RotateAnimation;
 import android.widget.Filter;
 import android.widget.Filterable;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class RuneWordAdaptor extends RecyclerView.Adapter<RuneWordAdaptor.ViewHolder>
-  implements Filterable {
+    implements Filterable {
 
   private List<RuneWord> runeWordListFull;
   private List<RuneWord> runeWordList;
@@ -63,7 +62,6 @@ class RuneWordAdaptor extends RecyclerView.Adapter<RuneWordAdaptor.ViewHolder>
     StringBuilder str = new StringBuilder();
     RuneWord curWord = runeWordList.get(position);
 
-    SpannableStringBuilder spannable = new SpannableStringBuilder();
     if (curWord.isLadder()) {
       holder.wordNameView.setText(curWord.getRuneWordName().concat("(Ladder Only)"));
     } else {
@@ -106,12 +104,16 @@ class RuneWordAdaptor extends RecyclerView.Adapter<RuneWordAdaptor.ViewHolder>
     holder.itemTypes.setText(str);
 
     //Load Required Runes
+    SpannableStringBuilder spannable = new SpannableStringBuilder();
     spannable.append("Required Runes: ");
     int start = spannable.length() - 1;
 
     for (Rune rune : curWord.getRequiredRunes()) {
       spannable.append(rune.getRuneName().toUpperCase());
-      spannable.setSpan(new StyleSpan(Typeface.BOLD), start, spannable.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+      spannable.setSpan(new StyleSpan(Typeface.BOLD),
+                        start,
+                        spannable.length(),
+                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
       spannable.append(", ");
       start = spannable.length();
     }
@@ -204,7 +206,8 @@ class RuneWordAdaptor extends RecyclerView.Adapter<RuneWordAdaptor.ViewHolder>
           if (!favouriteToggle.isChecked()) {
             favouriteToggle.setBackgroundDrawable(greyStar);
 
-            int tempIndex = favouriteRuneWords.indexOf(runeWordList.get((getAdapterPosition())).getId());
+            int tempIndex = favouriteRuneWords
+                              .indexOf(runeWordList.get((getAdapterPosition())).getId());
 
             System.out.println(tempIndex);
 
@@ -229,20 +232,22 @@ class RuneWordAdaptor extends RecyclerView.Adapter<RuneWordAdaptor.ViewHolder>
         @Override
         public void onClick(View v) {
           if (statsSection.getVisibility() == View.GONE) {
-            ExpansionAnimation.expand(statsSection, Integer.parseInt(AnimationSpeed.BUTTON.toString()));
+            ExpansionAnimation.expand(statsSection,
+                                      Integer.parseInt(AnimationSpeed.BUTTON.toString()));
 
             RotateAnimation ra = new RotateAnimation(0, 360,
-              RotateAnimation.RELATIVE_TO_SELF, .5f,
-              RotateAnimation.RELATIVE_TO_SELF, .5f);
+                RotateAnimation.RELATIVE_TO_SELF, .5f,
+                RotateAnimation.RELATIVE_TO_SELF, .5f);
 
             ra.setDuration(500);
             statsExpandBtn.setAnimation(ra);
           } else {
-            ExpansionAnimation.collapse(statsSection, Integer.parseInt(AnimationSpeed.BUTTON.toString()));
+            ExpansionAnimation.collapse(statsSection,
+                                        Integer.parseInt(AnimationSpeed.BUTTON.toString()));
 
             RotateAnimation ra = new RotateAnimation(360, 0,
-              RotateAnimation.RELATIVE_TO_SELF, .5f,
-              RotateAnimation.RELATIVE_TO_SELF, .5f);
+                RotateAnimation.RELATIVE_TO_SELF, .5f,
+                RotateAnimation.RELATIVE_TO_SELF, .5f);
 
             ra.setDuration(500);
             statsExpandBtn.setAnimation(ra);

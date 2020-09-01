@@ -39,7 +39,10 @@ public class RuneFragment extends Fragment {
 
   @Override
   @Nullable
-  public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+  public View onCreateView(@Nullable LayoutInflater inflater,
+                           @Nullable ViewGroup container,
+                           @Nullable Bundle savedInstanceState) {
+
     super.onCreateView(inflater, container, savedInstanceState);
     binding = RuneFragmentBinding.inflate(inflater, container, false);
     View v = binding.getRoot();

@@ -7,13 +7,14 @@ import android.view.View;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 /**
- * THIS IS A WRAPPER CLASS FOR CODE BY Tom Esterez* <p>
+ * THIS IS A WRAPPER CLASS FOR CODE BY Tom Esterez
  * https://stackoverflow.com/questions/4946295/android-expand-collapse-animation
  */
 public class ExpansionAnimation {
 
   public static void expand(final View v, int miliSecs) {
-    int matchParentMeasureSpec = View.MeasureSpec.makeMeasureSpec(((View) v.getParent()).getWidth(), View.MeasureSpec.EXACTLY);
+    int matchParentMeasureSpec = View.MeasureSpec.makeMeasureSpec((
+        (View) v.getParent()).getWidth(), View.MeasureSpec.EXACTLY);
     int wrapContentMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
     v.measure(matchParentMeasureSpec, wrapContentMeasureSpec);
     final int targetHeight = v.getMeasuredHeight();

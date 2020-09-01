@@ -27,7 +27,9 @@ public class RuneSelectionListAdaptor<Exercise>
 
   @NonNull
   @Override
-  public RuneSelectionListAdaptor.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+  public RuneSelectionListAdaptor.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent,
+                                                                int viewType) {
+
     View v = LayoutInflater.from(parent.getContext())
       .inflate(R.layout.rune_selection_item, parent, false);
 
@@ -35,7 +37,9 @@ public class RuneSelectionListAdaptor<Exercise>
   }
 
   @Override
-  public void onBindViewHolder(@NonNull RuneSelectionListAdaptor.ViewHolder holder, final int position) {
+  public void onBindViewHolder(@NonNull RuneSelectionListAdaptor.ViewHolder holder,
+                               final int position) {
+
     Rune curWord = runeList.get(position);
 
     holder.number.setText(availableRunes.get(position));

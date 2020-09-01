@@ -23,7 +23,6 @@ import com.example.diablo2runewords.databinding.RuneWordsFragmentBinding;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.zip.Inflater;
 
 public class RuneWordFragment extends Fragment {
   private String favRuneWordsKey;
@@ -43,12 +42,14 @@ public class RuneWordFragment extends Fragment {
                                              boolean getComplete) {
     Bundle args = new Bundle(4);
 
-    RuneWordFragment fragment = new RuneWordFragment();
     args.putParcelableArrayList("runeWords", runeWordList);
     args.putIntegerArrayList("availableRunes", availableRunes);
     args.putBoolean("getComplete", getComplete);
     args.putBoolean("favOnly", false);
+
+    RuneWordFragment fragment = new RuneWordFragment();
     fragment.setArguments(args);
+
     return fragment;
   }
 
@@ -56,11 +57,13 @@ public class RuneWordFragment extends Fragment {
                                              ArrayList<Integer> favRuneWords) {
     Bundle args = new Bundle(3);
 
-    RuneWordFragment fragment = new RuneWordFragment();
     args.putParcelableArrayList("runeWords", runeWordList);
     args.putIntegerArrayList("favRuneWords", favRuneWords);
     args.putBoolean("favOnly", true);
+
+    RuneWordFragment fragment = new RuneWordFragment();
     fragment.setArguments(args);
+
     return fragment;
   }
 
@@ -79,7 +82,10 @@ public class RuneWordFragment extends Fragment {
     sharedPreferences = getActivity().getSharedPreferences("USER", Activity.MODE_PRIVATE);
   }
 
-  public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+  public View onCreateView(LayoutInflater inflater,
+                           @Nullable ViewGroup container,
+                           @Nullable Bundle savedInstanceState) {
+
     super.onCreate(savedInstanceState);
     binding = RuneWordsFragmentBinding.inflate(inflater, container, false);
     View v = binding.getRoot();
@@ -88,8 +94,10 @@ public class RuneWordFragment extends Fragment {
 
     //Load data into socketNumberSpinner
     ArrayAdapter<String> socketNumberSpinnerAdaptor = new ArrayAdapter<>(this.getActivity(),
-            android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.number_of_sockets));
-    socketNumberSpinnerAdaptor.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+            android.R.layout.simple_list_item_1,
+            getResources().getStringArray(R.array.number_of_sockets));
+    socketNumberSpinnerAdaptor.setDropDownViewResource(
+            R.layout.support_simple_spinner_dropdown_item);
     binding.socketNumberSpinner.setAdapter(socketNumberSpinnerAdaptor);
 
     //Load data into itemTypeSpinner
@@ -121,7 +129,8 @@ public class RuneWordFragment extends Fragment {
       originalSelectedRuneWords = new ArrayList<>(currentSelectedRuneWords);
 
       runeWordAdaptor = new RuneWordAdaptor(currentSelectedRuneWords, v.getContext());
-      runeWordAdaptor.setFavouriteRuneWords(DataUtil.loadArrayList(sharedPreferences, favRuneWordsKey));
+      runeWordAdaptor.setFavouriteRuneWords(
+              DataUtil.loadArrayList(sharedPreferences, favRuneWordsKey));
     }
     binding.runeWordsList.setAdapter(runeWordAdaptor);
     return v;
@@ -181,7 +190,9 @@ public class RuneWordFragment extends Fragment {
     return tempList;
   }
 
-  private ArrayList<RuneWord> filterByItemType(ArrayList<RuneWord> runeWordList, RuneWordCategory itemType) {
+  private ArrayList<RuneWord> filterByItemType(ArrayList<RuneWord> runeWordList,
+                                               RuneWordCategory itemType) {
+
     ArrayList<RuneWord> tempList = new ArrayList<>();
 
     for (RuneWord rw : runeWordList) {
@@ -194,7 +205,10 @@ public class RuneWordFragment extends Fragment {
     return tempList;
   }
 
-  private ArrayList<RuneWord> filterByCharacterLevel(ArrayList<RuneWord> runeWordList, int minCharLevel, int maxCharLevel) {
+  private ArrayList<RuneWord> filterByCharacterLevel(ArrayList<RuneWord> runeWordList,
+                                                     int minCharLevel,
+                                                     int maxCharLevel) {
+
     ArrayList<RuneWord> tempList = new ArrayList<>();
 
     if (minCharLevel > maxCharLevel) {
@@ -230,13 +244,15 @@ public class RuneWordFragment extends Fragment {
     ArrayList<RuneWord> tempList = new ArrayList<>();
 
     if (binding.itemTypeFilterToggle.isChecked()) {
-      tempList.addAll(filterByItemType(tempOriginalList, (RuneWordCategory) binding.itemTypeSpinner.getSelectedItem()));
+      tempList.addAll(filterByItemType(tempOriginalList,
+            (RuneWordCategory) binding.itemTypeSpinner.getSelectedItem()));
       tempOriginalList.clear();
       tempOriginalList.addAll(tempList);
       tempList.clear();
     }
     if (binding.socketFilterToggle.isChecked()) {
-      tempList.addAll(filterBySockets(tempOriginalList, Integer.parseInt((String) binding.socketNumberSpinner.getSelectedItem())));
+      tempList.addAll(filterBySockets(tempOriginalList,
+              Integer.parseInt((String) binding.socketNumberSpinner.getSelectedItem())));
       tempOriginalList.clear();
       tempOriginalList.addAll(tempList);
       tempList.clear();
@@ -267,7 +283,7 @@ public class RuneWordFragment extends Fragment {
           }
         });
         ExpansionAnimation.collapse(binding.sortArea,
-          Integer.parseInt(AnimationSpeed.DROPDOWN_OPEN.toString()));
+            Integer.parseInt(AnimationSpeed.DROPDOWN_OPEN.toString()));
 
         runeWordAdaptor.notifyDataSetChanged();
       }
@@ -282,7 +298,7 @@ public class RuneWordFragment extends Fragment {
           }
         });
         ExpansionAnimation.collapse(binding.sortArea,
-          Integer.parseInt(AnimationSpeed.DROPDOWN_CLOSE.toString()));
+            Integer.parseInt(AnimationSpeed.DROPDOWN_CLOSE.toString()));
 
         runeWordAdaptor.notifyDataSetChanged();
       }
@@ -293,10 +309,10 @@ public class RuneWordFragment extends Fragment {
         if (binding.sortArea.getVisibility() == View.GONE) {
           binding.filterArea.setVisibility(View.GONE);
           ExpansionAnimation.expand(binding.sortArea,
-            Integer.parseInt(AnimationSpeed.DROPDOWN_OPEN.toString()));
+              Integer.parseInt(AnimationSpeed.DROPDOWN_OPEN.toString()));
         } else {
           ExpansionAnimation.collapse(binding.sortArea,
-            Integer.parseInt(AnimationSpeed.DROPDOWN_CLOSE.toString()));
+              Integer.parseInt(AnimationSpeed.DROPDOWN_CLOSE.toString()));
         }
 
         runeWordAdaptor.notifyDataSetChanged();
@@ -308,10 +324,10 @@ public class RuneWordFragment extends Fragment {
         if (binding.filterArea.getVisibility() == View.GONE) {
           binding.sortArea.setVisibility(View.GONE);
           ExpansionAnimation.expand(binding.filterArea,
-            Integer.parseInt(AnimationSpeed.DROPDOWN_OPEN.toString()));
+              Integer.parseInt(AnimationSpeed.DROPDOWN_OPEN.toString()));
         } else {
           ExpansionAnimation.collapse(binding.filterArea,
-            Integer.parseInt(AnimationSpeed.DROPDOWN_CLOSE.toString()));
+              Integer.parseInt(AnimationSpeed.DROPDOWN_CLOSE.toString()));
         }
 
         runeWordAdaptor.notifyDataSetChanged();
@@ -351,15 +367,16 @@ public class RuneWordFragment extends Fragment {
     super.onStop();
 
     DataUtil.saveArrayList(sharedPreferences,
-      favRuneWordsKey,
-      runeWordAdaptor.getFavouriteRuneWords());
+        favRuneWordsKey,
+        runeWordAdaptor.getFavouriteRuneWords());
   }
 
   @Override
   public void onResume() {
     super.onResume();
 
-    runeWordAdaptor.setFavouriteRuneWords(DataUtil.loadArrayList(sharedPreferences, favRuneWordsKey));
+    runeWordAdaptor.setFavouriteRuneWords(
+            DataUtil.loadArrayList(sharedPreferences, favRuneWordsKey));
   }
 
   @Override
