@@ -13,8 +13,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 public class ExpansionAnimation {
 
   public static void expand(final View v, int miliSecs) {
-    int matchParentMeasureSpec = View.MeasureSpec.makeMeasureSpec(
-      ((View) v.getParent()).getWidth(), View.MeasureSpec.EXACTLY);
+    int matchParentMeasureSpec = View.MeasureSpec.makeMeasureSpec((
+        (View) v.getParent()).getWidth(), View.MeasureSpec.EXACTLY);
     int wrapContentMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
     v.measure(matchParentMeasureSpec, wrapContentMeasureSpec);
     final int targetHeight = v.getMeasuredHeight();
