@@ -20,7 +20,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class RuneListAdaptor extends RecyclerView.Adapter<RuneListAdaptor.ViewHolder> implements Filterable {
+public class RuneListAdaptor extends RecyclerView.Adapter<RuneListAdaptor.ViewHolder>
+                             implements Filterable {
+
   private ArrayList<Rune> runeList;
   private ArrayList<Rune> runeListFull;
   private Context context;
