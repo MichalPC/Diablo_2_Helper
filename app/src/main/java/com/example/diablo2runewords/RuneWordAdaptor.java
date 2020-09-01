@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class RuneWordAdaptor extends RecyclerView.Adapter<RuneWordAdaptor.ViewHolder>
-  implements Filterable {
+    implements Filterable {
 
   private List<RuneWord> runeWordListFull;
   private List<RuneWord> runeWordList;
