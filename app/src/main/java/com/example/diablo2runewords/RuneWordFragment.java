@@ -42,12 +42,14 @@ public class RuneWordFragment extends Fragment {
                                              boolean getComplete) {
     Bundle args = new Bundle(4);
 
-    RuneWordFragment fragment = new RuneWordFragment();
     args.putParcelableArrayList("runeWords", runeWordList);
     args.putIntegerArrayList("availableRunes", availableRunes);
     args.putBoolean("getComplete", getComplete);
     args.putBoolean("favOnly", false);
+
+    RuneWordFragment fragment = new RuneWordFragment();
     fragment.setArguments(args);
+
     return fragment;
   }
 
