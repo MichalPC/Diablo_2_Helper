@@ -57,11 +57,13 @@ public class RuneWordFragment extends Fragment {
                                              ArrayList<Integer> favRuneWords) {
     Bundle args = new Bundle(3);
 
-    RuneWordFragment fragment = new RuneWordFragment();
     args.putParcelableArrayList("runeWords", runeWordList);
     args.putIntegerArrayList("favRuneWords", favRuneWords);
     args.putBoolean("favOnly", true);
+
+    RuneWordFragment fragment = new RuneWordFragment();
     fragment.setArguments(args);
+
     return fragment;
   }
 
