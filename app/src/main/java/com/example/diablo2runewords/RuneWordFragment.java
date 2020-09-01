@@ -283,7 +283,7 @@ public class RuneWordFragment extends Fragment {
           }
         });
         ExpansionAnimation.collapse(binding.sortArea,
-          Integer.parseInt(AnimationSpeed.DROPDOWN_OPEN.toString()));
+            Integer.parseInt(AnimationSpeed.DROPDOWN_OPEN.toString()));
 
         runeWordAdaptor.notifyDataSetChanged();
       }
@@ -298,7 +298,7 @@ public class RuneWordFragment extends Fragment {
           }
         });
         ExpansionAnimation.collapse(binding.sortArea,
-          Integer.parseInt(AnimationSpeed.DROPDOWN_CLOSE.toString()));
+            Integer.parseInt(AnimationSpeed.DROPDOWN_CLOSE.toString()));
 
         runeWordAdaptor.notifyDataSetChanged();
       }
@@ -309,10 +309,10 @@ public class RuneWordFragment extends Fragment {
         if (binding.sortArea.getVisibility() == View.GONE) {
           binding.filterArea.setVisibility(View.GONE);
           ExpansionAnimation.expand(binding.sortArea,
-            Integer.parseInt(AnimationSpeed.DROPDOWN_OPEN.toString()));
+              Integer.parseInt(AnimationSpeed.DROPDOWN_OPEN.toString()));
         } else {
           ExpansionAnimation.collapse(binding.sortArea,
-            Integer.parseInt(AnimationSpeed.DROPDOWN_CLOSE.toString()));
+              Integer.parseInt(AnimationSpeed.DROPDOWN_CLOSE.toString()));
         }
 
         runeWordAdaptor.notifyDataSetChanged();
@@ -324,10 +324,10 @@ public class RuneWordFragment extends Fragment {
         if (binding.filterArea.getVisibility() == View.GONE) {
           binding.sortArea.setVisibility(View.GONE);
           ExpansionAnimation.expand(binding.filterArea,
-            Integer.parseInt(AnimationSpeed.DROPDOWN_OPEN.toString()));
+              Integer.parseInt(AnimationSpeed.DROPDOWN_OPEN.toString()));
         } else {
           ExpansionAnimation.collapse(binding.filterArea,
-            Integer.parseInt(AnimationSpeed.DROPDOWN_CLOSE.toString()));
+              Integer.parseInt(AnimationSpeed.DROPDOWN_CLOSE.toString()));
         }
 
         runeWordAdaptor.notifyDataSetChanged();
