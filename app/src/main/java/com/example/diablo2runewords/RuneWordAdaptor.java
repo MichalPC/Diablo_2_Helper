@@ -62,7 +62,6 @@ class RuneWordAdaptor extends RecyclerView.Adapter<RuneWordAdaptor.ViewHolder>
     StringBuilder str = new StringBuilder();
     RuneWord curWord = runeWordList.get(position);
 
-    SpannableStringBuilder spannable = new SpannableStringBuilder();
     if (curWord.isLadder()) {
       holder.wordNameView.setText(curWord.getRuneWordName().concat("(Ladder Only)"));
     } else {
@@ -105,6 +104,7 @@ class RuneWordAdaptor extends RecyclerView.Adapter<RuneWordAdaptor.ViewHolder>
     holder.itemTypes.setText(str);
 
     //Load Required Runes
+    SpannableStringBuilder spannable = new SpannableStringBuilder();
     spannable.append("Required Runes: ");
     int start = spannable.length() - 1;
 
