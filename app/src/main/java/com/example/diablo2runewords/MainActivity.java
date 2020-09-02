@@ -20,6 +20,8 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity
                           implements NavigationView.OnNavigationItemSelectedListener {
 
+  private String runesFileName = "runes.json";
+  private String runeWordsFileName = "rune_words.json";
   private ActivityMainBinding binding;
   private ArrayList<Rune> runeList;
   private ArrayList<RuneWord> runeWordList;
