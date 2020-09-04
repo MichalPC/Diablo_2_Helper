@@ -42,7 +42,7 @@ public class RuneSelectionListAdaptor<Exercise>
 
     Rune curWord = runeList.get(position);
 
-    holder.number.setText(availableRunes.get(position));
+    holder.number.setText(availableRunes.get(position).toString());
 
     holder.name.setText(curWord.getRuneName());
   }
