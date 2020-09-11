@@ -48,10 +48,6 @@ public class RuneListAdaptor extends RecyclerView.Adapter<RuneListAdaptor.ViewHo
 
     holder.runeWordNameView.setText(curRune.getRuneName());
     holder.runeWordStatsView.setText(curRune.getRuneStats().toString());
-
-    int imgID = holder.itemView.getResources().getIdentifier(curRune.getRuneName().toLowerCase(),
-            "drawable", holder.itemView.getContext().getPackageName());
-    holder.temp.setImageResource(imgID);
   }
 
   @Override
