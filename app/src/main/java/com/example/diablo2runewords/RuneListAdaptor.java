@@ -96,7 +96,6 @@ public class RuneListAdaptor extends RecyclerView.Adapter<RuneListAdaptor.ViewHo
     public ImageView runeStatsBtn;
     public ConstraintLayout runeStatsSection;
     public ToggleButton runeFavouriteToggle;
-    public ImageView temp;
     public ConstraintLayout runeLayout;
     Drawable greyStar = ResourcesCompat.getDrawable(itemView.getResources(),
                                                     R.drawable.star_grey,
@@ -108,7 +107,6 @@ public class RuneListAdaptor extends RecyclerView.Adapter<RuneListAdaptor.ViewHo
     public ViewHolder(@NonNull final View itemView) {
       super(itemView);
 
-      temp = itemView.findViewById(R.id.imageView);
       runeWordNameView = itemView.findViewById(R.id.rune_word_name);
       runeWordStatsView = itemView.findViewById(R.id.rune_stats);
       runeStatsBtn = itemView.findViewById(R.id.rune_stats_section_button);
